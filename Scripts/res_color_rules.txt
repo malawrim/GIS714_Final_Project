@@ -1,0 +1,13 @@
+1	#ffffff
+2	#ffffff
+3	#ffffff
+4	#ffffff
+5	#ffffff
+6	#ffffff
+7	#ffffff
+8	#392942
+9	#6f597a
+10	#533f5e
+11	#8b7696
+12	#a997b2
+13	#c8bace

@@ -1,0 +1,1 @@
+r.reclass --overwrite input=adaptation_seed_1_31@ad_hoc output=adaptaion_seed_reclass rules=D:/Raleigh_Prototype_Zoning/scripts/FUTURES/adaptation_reclass.txt

@@ -1,0 +1,6 @@
+// Write a script to return a value to show in the pop-up. 
+// For example, get the average of 4 fields:
+// Average($feature.SalesQ1, $feature.SalesQ2, $feature.SalesQ3, $feature.SalesQ4)
+IIf($feature.gridcode == 1, "1 year return, 100% annual chance of flooding", IIf($feature.gridcode == 2, "2 year return, 50% annual chance of flooding", IIf($feature.gridcode == 5, "5 year return, 20% annual chance of flooding", IIf($feature.gridcode == 10, "10 year return, 10% annual chance of flooding", IIf($feature.gridcode == 20, "20 year return, 5% annual chance of flooding", IIf($feature.gridcode == 50, "50 year return, 2% annual chance of flooding", IIf($feature.gridcode == 100, "100 year return, 1% annual chance of flooding", "Flooded land, no adaptation")))))))
+
+IIf($feature.gridcode == -1, "Abandoned", IIf($feature.gridcode == 1, "New Development", "Prior Development")

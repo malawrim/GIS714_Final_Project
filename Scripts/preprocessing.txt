@@ -1,0 +1,28 @@
+Pre Processing in ArcGIS Pro for speed/ease of cleaning
+
+Road Density:
+
+Tried in GRASS:
+- lines to points
+    - v.to.points -i --overwrite input=roads@PERMANENT type=line output=points_on_road@PERMANENT use=vertex dmax=1
+- Creating road density dataset
+    - v.kernel input=points_on_road output=road_density radius=5000 multiplier=1000000
+    - r.li.patchdensity --overwrite input=road_rast@PERMANENT config=config output=road_density
+In ArcGIS Pro:
+- ran line density tool on ArcGIS Pro - for NC, it ran for 3 days and 4 hours
+
+Building Density:
+Need to differentiate between number of buildings per unit area and area covered by builZing footprints
+
+In ArcGIS Pro:
+Number buildings per unit area:
+- polygon to point
+- calculate density
+
+Area covered by building footprints:
+- JSON to features
+- New area field
+- Calculate geometry (area)
+- Spatial Join (1 to 1 summing building area within census blocks)
+- new field
+- calculate field total building area/ census block area
